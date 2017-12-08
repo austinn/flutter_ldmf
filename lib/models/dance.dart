@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class Dance {
-  var id;
+  int id;
   var name;
   var choreographer;
   var rating;
@@ -10,7 +10,7 @@ class Dance {
   var count;
 
   Dance.JSON(json) {
-    this.id = json["id"];
+    this.id = json["index"];
     this.name = json["name"];
     this.choreographer = json["choreographer"];
     this.rating = json["rating"];

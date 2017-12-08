@@ -9,11 +9,25 @@ class DanceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    getImageForLevel() {
+      int id = dance.id;
+      if(id % 3 == 0) {
+        return "assets/img/eye.png";
+      } else if(id == 1) {
+        return "assets/img/loop.png";
+      } else {
+        return "assets/img/triangle.png";
+      }
+    }
+
     final danceThumbnail = new Container(
       alignment: Alignment.center,
       margin: new EdgeInsets.symmetric(horizontal: 12.0),
-      child: new FloatingActionButton(
-          onPressed: null
+      child: new Image(
+        image: new AssetImage(getImageForLevel()),
+        height: 58.0,
+        width: 58.0,
       ),
     );
 
@@ -40,8 +54,8 @@ class DanceItem extends StatelessWidget {
                 child: new Text(
                   dance.choreographer,
                   style: new TextStyle(
-                      color: new Color(0xFFBECDD5),
-                      fontWeight: FontWeight.w500,
+                    color: new Color(0xFFBECDD5),
+                    fontWeight: FontWeight.w500,
 //                      fontStyle: FontStyle.italic
                   ),
                 )
@@ -58,8 +72,8 @@ class DanceItem extends StatelessWidget {
             child: new Text(
               dance.level,
               style: new TextStyle(
-                color: new Color(0xFABECDD5),
-                fontFamily: 'Lato'
+                  color: new Color(0xFABECDD5),
+                  fontFamily: 'Lato'
               ),
             ),
           )

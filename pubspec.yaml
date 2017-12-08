@@ -55,6 +55,9 @@ flutter:
   assets:
     - assets/json/dances.json
     - assets/img/filters.png
+    - assets/img/triangle.png
+    - assets/img/eye.png
+    - assets/img/loop.png
 
   fonts:
     - family: REZ
