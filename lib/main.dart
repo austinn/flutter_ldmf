@@ -200,31 +200,31 @@ class HomePageState extends State<HomePage> {
         child: new Row(
           children: <Widget>[
             new Expanded(
-              child: new GestureDetector(
-                onTap: _showFilterDialog,
-                child: new Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    new Text(
-                      "Dances",
-                      style: new TextStyle(
-                        color: new Color(0xAA5C727C),
-                        fontSize: 20.0,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.bold,
-                      ),
+              child: new Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  new Text(
+                    "Dances",
+                    style: new TextStyle(
+                      color: new Color(0xAA5C727C),
+                      fontSize: 20.0,
+                      fontFamily: 'Lato',
+                      fontWeight: FontWeight.bold,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             new Column(
               children: <Widget>[
-                new Container(
-                  margin: new EdgeInsets.only(right: 8.0),
-                  child: new Image(
-                    image: new AssetImage("assets/img/filters.png"),
-                    height: 24.0,
+                new GestureDetector(
+                  onTap: _showFilterDialog,
+                  child: new Container(
+                    margin: new EdgeInsets.only(right: 8.0),
+                    child: new Image(
+                      image: new AssetImage("assets/img/filters.png"),
+                      height: 24.0,
+                    ),
                   ),
                 )
               ],
